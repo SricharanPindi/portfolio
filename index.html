@@ -3,24 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sricharan Pindi | Data Analyst</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Sricharan Reddy Pindi | Data Analyst</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #0f0e0c;
-    --ink2: #3a3830;
-    --ink3: #7a7670;
-    --bg: #faf8f3;
-    --bg2: #f0ece2;
-    --bg3: #e8e2d4;
-    --accent: #1a5c3a;
-    --accent2: #2d8a5a;
-    --gold: #b8872a;
-    --gold2: #e8b84b;
-    --border: rgba(15,14,12,0.12);
-    --r: 10px;
+    --bg: #f9f7f4;
+    --bg2: #f0ece4;
+    --bg3: #e5e0d5;
+    --ink: #1a1916;
+    --ink2: #3d3b35;
+    --ink3: #7a776e;
+    --green: #1a5c3a;
+    --green2: #2d8a5a;
+    --green-light: #e8f5ee;
+    --border: rgba(26,25,22,0.1);
+    --white: #ffffff;
   }
 
   html { scroll-behavior: smooth; }
@@ -30,633 +29,741 @@
     background: var(--bg);
     color: var(--ink);
     line-height: 1.6;
-    min-height: 100vh;
   }
 
+  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1rem 2.5rem;
-    background: rgba(250,248,243,0.92);
-    backdrop-filter: blur(8px);
+    padding: 0.9rem 2.5rem;
+    background: rgba(249,247,244,0.94);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
-    z-index: 100;
+    z-index: 200;
   }
   .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
     color: var(--ink);
     text-decoration: none;
-    letter-spacing: 0.01em;
   }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--ink2);
     text-decoration: none;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover { color: var(--green); }
 
-  section { padding: 5rem 2.5rem; }
-
-  /* Hero */
-  #home {
-    padding-top: 9rem;
+  /* ── HERO ── */
+  #hero {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 7rem 2rem 4rem;
+    background: var(--bg);
   }
-  .hero-eyebrow {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent2);
-    background: rgba(45,138,90,0.1);
-    padding: 0.35rem 0.85rem;
-    border-radius: 20px;
+  .hero-email {
+    font-size: 0.82rem;
+    color: var(--ink3);
+    letter-spacing: 0.05em;
     margin-bottom: 1.25rem;
   }
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
-    line-height: 1.1;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-  }
-  .hero-name em {
-    font-style: italic;
-    color: var(--accent);
-  }
-  .hero-title {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--ink3);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
-  }
-  .hero-desc {
-    font-size: 0.95rem;
-    color: var(--ink2);
-    line-height: 1.75;
+  .hero-socials {
+    display: flex; gap: 0.75rem; justify-content: center;
     margin-bottom: 2rem;
-    max-width: 460px;
   }
-  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--accent);
+  .social-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.45rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 30px;
+    color: var(--ink2);
+    text-decoration: none;
+    background: var(--white);
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .social-btn:hover { border-color: var(--green); color: var(--green); background: var(--green-light); }
+  .hero-avatar {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--green);
+    margin-bottom: 1.75rem;
+    background: var(--bg3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--green);
+  }
+  .hero-avatar-placeholder {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--green);
+    margin: 0 auto 1.75rem;
+    background: var(--green-light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--green);
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+  }
+  .hero-about {
+    font-size: 0.97rem;
+    color: var(--ink2);
+    max-width: 560px;
+    line-height: 1.8;
+    margin: 0 auto 2rem;
+  }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-solid {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: var(--green);
     color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--r);
-    font-size: 0.875rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
     font-weight: 500;
     text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s, transform 0.15s;
   }
-  .btn-primary:hover { background: var(--accent2); transform: translateY(-1px); }
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
+  .btn-solid:hover { background: var(--green2); transform: translateY(-2px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.4rem;
     border: 1.5px solid var(--border);
     color: var(--ink2);
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--r);
-    font-size: 0.875rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
     font-weight: 500;
     text-decoration: none;
     background: transparent;
     transition: border-color 0.2s, color 0.2s;
   }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-  .hero-visual {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .btn-outline:hover { border-color: var(--green); color: var(--green); }
+  .scroll-hint {
+    margin-top: 2.5rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    color: var(--ink3); font-size: 0.75rem; letter-spacing: 0.08em;
+    text-transform: uppercase; text-decoration: none;
+    animation: bounce 2s infinite;
   }
-  .stat-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-  .stat-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--r);
-    padding: 1.25rem;
-  }
-  .stat-number {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-  .stat-label {
-    font-size: 0.78rem;
-    color: var(--ink3);
-    font-weight: 500;
-    letter-spacing: 0.03em;
-  }
-  .company-strip {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--r);
-    padding: 1rem 1.25rem;
-    flex-wrap: wrap;
-  }
-  .company-strip span {
-    font-size: 0.75rem;
-    color: var(--ink3);
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-right: 0.5rem;
-  }
-  .company-badge {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px;
-    background: var(--bg3);
-    color: var(--ink2);
-    border: 1px solid var(--border);
+  .scroll-hint svg { width: 20px; opacity: 0.5; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
   }
 
-  /* Divider */
-  .section-divider {
-    max-width: 1100px;
-    margin: 0 auto;
-    border: none;
-    border-top: 1px solid var(--border);
-  }
-
-  /* Skills */
-  #skills {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink3);
+  /* ── SECTION SHARED ── */
+  section { padding: 5.5rem 2rem; }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--green2);
     margin-bottom: 0.5rem;
   }
-  .section-heading {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.2rem;
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     color: var(--ink);
     margin-bottom: 2.5rem;
     line-height: 1.2;
   }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  .skill-group {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: var(--r);
-    padding: 1.25rem;
-  }
-  .skill-group-title {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
-    display: flex; align-items: center; gap: 0.4rem;
-  }
-  .skill-tag {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 500;
-    background: var(--bg3);
-    color: var(--ink2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 0.25rem 0.6rem;
-    margin: 0.2rem 0.2rem 0.2rem 0;
+  .section-divider {
+    max-width: 900px; margin: 0 auto;
+    border: none; border-top: 1px solid var(--border);
   }
 
-  /* Projects */
-  #projects {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .projects-grid {
+  /* ── SKILLS ── */
+  #skills { background: var(--white); }
+  .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1.25rem;
   }
-  .project-card {
-    background: var(--bg2);
+  .skill-card {
+    background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(26,92,58,0.1);
+    border-color: var(--green2);
+  }
+  .skill-icon {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    background: var(--green-light);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 0.85rem;
+    font-size: 1.6rem;
+  }
+  .skill-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+  .skill-desc {
+    font-size: 0.75rem;
+    color: var(--ink3);
+    line-height: 1.4;
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--bg); }
+  .projects-list { display: flex; flex-direction: column; gap: 2.5rem; }
+  .project-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
     overflow: hidden;
-    display: flex; flex-direction: column;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-  .project-card:hover {
+  .project-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(15,14,12,0.08);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.07);
   }
-  .project-card-top {
-    height: 130px;
+  .project-item.reverse { direction: rtl; }
+  .project-item.reverse > * { direction: ltr; }
+  .project-img {
+    width: 100%; height: 220px;
+    object-fit: cover;
+    background: var(--bg2);
     display: flex; align-items: center; justify-content: center;
-    font-size: 2.5rem;
-    border-bottom: 1px solid var(--border);
+    font-size: 4rem;
   }
-  .project-card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+  .project-img-placeholder {
+    width: 100%; height: 220px;
+    background: var(--bg2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+  }
+  .project-body { padding: 1.75rem 2rem 1.75rem 0; }
+  .project-item.reverse .project-body { padding: 1.75rem 0 1.75rem 2rem; }
+  .project-tags-row {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .ptag {
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: var(--green-light);
+    color: var(--green);
+  }
   .project-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
     color: var(--ink);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     line-height: 1.3;
   }
   .project-desc {
-    font-size: 0.845rem;
+    font-size: 0.875rem;
     color: var(--ink3);
-    line-height: 1.65;
-    flex: 1;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.1rem;
   }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
-  .project-tag {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    padding: 0.2rem 0.55rem;
-    border-radius: 4px;
-  }
-  .tag-green { background: rgba(26,92,58,0.1); color: var(--accent); }
-  .tag-gold { background: rgba(184,135,42,0.1); color: var(--gold); }
-  .tag-blue { background: rgba(30,80,160,0.1); color: #1e50a0; }
   .project-link {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--accent);
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.82rem; font-weight: 600;
+    color: var(--green);
     text-decoration: none;
-    display: inline-flex; align-items: center; gap: 0.3rem;
-    transition: gap 0.2s;
+    border-bottom: 1.5px solid var(--green2);
+    padding-bottom: 1px;
+    transition: opacity 0.2s;
   }
-  .project-link:hover { gap: 0.55rem; }
+  .project-link:hover { opacity: 0.7; }
 
-  /* Experience */
-  #experience {
-    max-width: 1100px;
-    margin: 0 auto;
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: var(--white); }
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
   }
-  .exp-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .cert-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .cert-card:hover { transform: translateY(-3px); border-color: var(--green2); }
+  .cert-logo {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--green-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+  }
+  .cert-issuer { font-size: 0.75rem; color: var(--green2); font-weight: 600; letter-spacing: 0.04em; }
+  .cert-name { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .cert-sub { font-size: 0.78rem; color: var(--ink3); }
+  .cert-link {
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--green);
+    text-decoration: none;
+    margin-top: auto;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+  }
+  .cert-link:hover { text-decoration: underline; }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--bg); }
+  .exp-list { display: flex; flex-direction: column; gap: 0; }
   .exp-item {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 180px 1fr;
     gap: 2rem;
-    padding-bottom: 1.5rem;
+    padding: 2rem 0;
     border-bottom: 1px solid var(--border);
   }
-  .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .exp-meta { display: flex; flex-direction: column; gap: 0.25rem; padding-top: 0.15rem; }
-  .exp-date { font-size: 0.78rem; color: var(--ink3); font-weight: 500; }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-left {}
+  .exp-date { font-size: 0.75rem; color: var(--ink3); font-weight: 500; margin-bottom: 0.25rem; }
   .exp-company { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
-  .exp-company-badge {
-    display: inline-block;
-    margin-top: 0.35rem;
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.55rem;
+  .exp-badge {
+    display: inline-block; margin-top: 0.4rem;
+    font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    padding: 0.18rem 0.55rem;
     border-radius: 4px;
   }
-  .badge-uhg { background: rgba(26,92,58,0.12); color: var(--accent); }
-  .badge-wf { background: rgba(184,135,42,0.12); color: var(--gold); }
-  .badge-kpmg { background: rgba(30,80,160,0.12); color: #1e50a0; }
-  .exp-role {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 0.6rem;
-  }
-  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+  .badge-g { background: rgba(26,92,58,0.1); color: var(--green); }
+  .badge-w { background: rgba(184,135,42,0.1); color: #8a6010; }
+  .badge-k { background: rgba(30,80,160,0.1); color: #1e50a0; }
+  .exp-right {}
+  .exp-role { font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 0.6rem; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
   .exp-bullets li {
-    font-size: 0.875rem;
-    color: var(--ink2);
-    padding-left: 1rem;
-    position: relative;
-    line-height: 1.6;
+    font-size: 0.865rem; color: var(--ink2);
+    padding-left: 1rem; position: relative; line-height: 1.65;
   }
   .exp-bullets li::before {
-    content: '—';
-    position: absolute; left: 0;
-    color: var(--accent2);
-    font-size: 0.75rem;
+    content: '–'; position: absolute; left: 0;
+    color: var(--green2); font-size: 0.75rem;
   }
 
-  /* About */
-  #about {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .about-text { font-size: 0.95rem; color: var(--ink2); line-height: 1.8; }
-  .about-text p + p { margin-top: 1rem; }
-  .about-contact { display: flex; flex-direction: column; gap: 0.75rem; }
-  .contact-row {
-    display: flex; align-items: center; gap: 0.75rem;
-    font-size: 0.875rem; color: var(--ink2);
-    padding: 0.75rem 1rem;
-    background: var(--bg2);
+  /* ── EDUCATION ── */
+  #education { background: var(--white); }
+  .edu-card {
+    background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: var(--r);
-    text-decoration: none;
-    transition: border-color 0.2s;
+    border-radius: 16px;
+    padding: 1.75rem 2rem;
+    display: flex; gap: 1.5rem; align-items: flex-start;
   }
-  .contact-row:hover { border-color: var(--accent); color: var(--accent); }
-  .contact-icon {
-    width: 32px; height: 32px; border-radius: 8px;
+  .edu-icon {
+    width: 52px; height: 52px; flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--green-light);
     display: flex; align-items: center; justify-content: center;
-    background: var(--bg3); font-size: 1rem;
+    font-size: 1.5rem;
   }
+  .edu-school { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+  .edu-degree { font-size: 0.9rem; color: var(--green); font-weight: 500; margin-bottom: 0.2rem; }
+  .edu-date { font-size: 0.78rem; color: var(--ink3); margin-bottom: 0.6rem; }
+  .edu-courses { font-size: 0.82rem; color: var(--ink2); line-height: 1.6; }
 
+  /* ── CONTACT ── */
+  #contact { background: var(--green); text-align: center; padding: 4.5rem 2rem; }
+  #contact .section-tag { color: rgba(255,255,255,0.6); }
+  #contact .section-title { color: #fff; margin-bottom: 1rem; }
+  .contact-sub { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 2rem; }
+  .contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: #fff; color: var(--green);
+    padding: 0.75rem 1.75rem;
+    border-radius: 30px;
+    font-size: 0.875rem; font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, opacity 0.2s;
+  }
+  .btn-white:hover { transform: translateY(-2px); opacity: 0.92; }
+  .btn-white-outline {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border: 2px solid rgba(255,255,255,0.5); color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 30px;
+    font-size: 0.875rem; font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-white-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+  /* ── FOOTER ── */
   footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.78rem;
-    color: var(--ink3);
+    text-align: center; padding: 1.5rem 2rem;
+    font-size: 0.78rem; color: var(--ink3);
     border-top: 1px solid var(--border);
+    background: var(--bg);
   }
 
-  @media (max-width: 720px) {
-    #home { grid-template-columns: 1fr; padding-top: 7rem; }
-    #about { grid-template-columns: 1fr; gap: 2rem; }
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    nav { padding: 0.9rem 1.25rem; }
+    .nav-links { gap: 1rem; }
+    .project-item, .project-item.reverse { grid-template-columns: 1fr; direction: ltr; }
+    .project-item .project-body,
+    .project-item.reverse .project-body { padding: 1.25rem; }
+    .project-img-placeholder { height: 180px; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-    nav { padding: 1rem 1.25rem; }
-    section { padding: 3.5rem 1.25rem; }
+    section { padding: 4rem 1.25rem; }
   }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="#home" class="nav-logo">Sricharan Pindi</a>
+  <a href="#hero" class="nav-logo">Sricharan R. Pindi</a>
   <ul class="nav-links">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<section id="home">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Open to opportunities</div>
-    <h1 class="hero-name">Sricharan<br><em>Reddy Pindi</em></h1>
-    <p class="hero-title">Data Analyst · SQL · Python · Power BI · Snowflake</p>
-    <p class="hero-desc">
-      4 years turning complex data into clear decisions — across healthcare payer operations, financial services, and consulting. I build the pipelines, models, and dashboards that help teams move faster.
-    </p>
-    <div class="hero-ctas">
-      <a href="mailto:sricharan9292@gmail.com" class="btn-primary">Get in touch →</a>
-      <a href="https://github.com/SricharanPindi" target="_blank" class="btn-secondary">GitHub ↗</a>
-      <a href="https://linkedin.com/in/sricharan-reddy-pindi" target="_blank" class="btn-secondary">LinkedIn ↗</a>
-    </div>
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-email">📧 sricharan9292@gmail.com</p>
+  <div class="hero-socials">
+    <a href="https://www.linkedin.com/in/sricharan-reddy-pindi/" target="_blank" class="social-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://github.com/sricharan9292" target="_blank" class="social-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      GitHub
+    </a>
+    <a href="https://sricharanpindi.github.io/portfolio/" target="_blank" class="social-btn">
+      🌐 Portfolio
+    </a>
   </div>
 
-  <div class="hero-visual">
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-number">4+</div>
-        <div class="stat-label">Years of experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">30%</div>
-        <div class="stat-label">Reporting cycle reduction</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">$2B+</div>
-        <div class="stat-label">Monthly transaction volume analyzed</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">3</div>
-        <div class="stat-label">Industries served</div>
-      </div>
-    </div>
-    <div class="company-strip">
-      <span>Worked at</span>
-      <span class="company-badge">UnitedHealth Group</span>
-      <span class="company-badge">Wells Fargo</span>
-      <span class="company-badge">KPMG</span>
-    </div>
+  <!-- Replace src below with your actual photo URL once uploaded to GitHub -->
+  <div class="hero-avatar-placeholder">S</div>
+
+  <h1 class="hero-name">Sricharan Reddy Pindi</h1>
+  <p class="hero-about">
+    Data Analyst with 4+ years of experience across healthcare payer operations, financial services, and consulting. I build the pipelines, dashboards, and models that turn complex data into clear decisions — from Snowflake to Power BI to the boardroom.
+  </p>
+  <div class="hero-btns">
+    <a href="#projects" class="btn-solid">View Projects ↓</a>
+    <a href="mailto:sricharan9292@gmail.com" class="btn-outline">Get in Touch</a>
   </div>
+  <a href="#skills" class="scroll-hint">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    scroll
+  </a>
 </section>
 
 <hr class="section-divider">
 
+<!-- SKILLS -->
 <section id="skills">
-  <p class="section-label">Technical stack</p>
-  <h2 class="section-heading">Skills &amp; tools</h2>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <div class="skill-group-title">💻 Languages</div>
-      <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">R</span><span class="skill-tag">PySpark</span><span class="skill-tag">SAS</span><span class="skill-tag">HTML/CSS</span>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">📊 BI &amp; Visualization</div>
-      <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">☁️ Cloud &amp; Data</div>
-      <span class="skill-tag">Snowflake</span><span class="skill-tag">Azure Synapse</span><span class="skill-tag">Databricks</span><span class="skill-tag">Teradata</span><span class="skill-tag">PostgreSQL</span>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">🐍 Libraries</div>
-      <span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">FastAPI</span>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">🔧 Engineering</div>
-      <span class="skill-tag">ETL Pipelines</span><span class="skill-tag">Dimensional Modeling</span><span class="skill-tag">Data Governance</span><span class="skill-tag">Data Normalization</span>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">🛠️ Dev Tools</div>
-      <span class="skill-tag">Git</span><span class="skill-tag">Docker</span><span class="skill-tag">Jupyter</span><span class="skill-tag">VS Code</span><span class="skill-tag">Excel</span>
+  <div class="section-inner">
+    <p class="section-tag">Technical stack</p>
+    <h2 class="section-title">Key Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">SQL</div>
+        <div class="skill-desc">Complex queries, joins, optimization on large-scale datasets</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🐍</div>
+        <div class="skill-name">Python</div>
+        <div class="skill-desc">Pandas, NumPy, Scikit-learn, automation & forecasting pipelines</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <div class="skill-name">Power BI</div>
+        <div class="skill-desc">DAX, semantic layers, executive dashboards & self-serve BI</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">❄️</div>
+        <div class="skill-name">Snowflake</div>
+        <div class="skill-desc">Analytical datasets, dimensional modeling, cloud data warehouse</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">PySpark</div>
+        <div class="skill-desc">High-volume data pipelines, query optimization at scale</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📈</div>
+        <div class="skill-name">Tableau</div>
+        <div class="skill-desc">Dashboards, storytelling, operational risk reporting</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">Azure Synapse</div>
+        <div class="skill-desc">Cloud data platform, ETL integration, enterprise analytics</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🔧</div>
+        <div class="skill-name">ETL Pipelines</div>
+        <div class="skill-desc">Data normalization, governance, dimensional modeling</div>
+      </div>
     </div>
   </div>
 </section>
 
 <hr class="section-divider">
 
+<!-- PROJECTS -->
 <section id="projects">
-  <p class="section-label">Featured work</p>
-  <h2 class="section-heading">Projects</h2>
-  <div class="projects-grid">
+  <div class="section-inner">
+    <p class="section-tag">Featured work</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-list">
 
-    <div class="project-card">
-      <div class="project-card-top" style="background: linear-gradient(135deg, #e8f5ee, #d0ead9);">🏥</div>
-      <div class="project-card-body">
-        <h3 class="project-title">Claims Operations Analytics Dashboard</h3>
-        <p class="project-desc">End-to-end analytical solution in Snowflake with a Power BI front end tracking AI-enabled claims KPIs — auto-adjudication rates, cycle times, and payment accuracy across 5 business units. Reduced ad hoc data requests by ~30%.</p>
-        <div class="project-tags">
-          <span class="project-tag tag-green">Snowflake</span>
-          <span class="project-tag tag-green">Power BI</span>
-          <span class="project-tag tag-gold">SQL</span>
-          <span class="project-tag tag-gold">Python</span>
+      <!-- Project 1 -->
+      <div class="project-item">
+        <div class="project-img-placeholder">🏥</div>
+        <div class="project-body">
+          <div class="project-tags-row">
+            <span class="ptag">Snowflake</span>
+            <span class="ptag">Power BI</span>
+            <span class="ptag">SQL</span>
+            <span class="ptag">Python</span>
+          </div>
+          <h3 class="project-title">Claims Operations Analytics Dashboard</h3>
+          <p class="project-desc">End-to-end analytical solution tracking AI-enabled claims KPIs — auto-adjudication rates, cycle times, and payment accuracy across 5 business units. Designed the semantic layer to support self-serve reporting for 10 stakeholders, cutting ad hoc requests by ~30%.</p>
+          <a href="https://github.com/sricharan9292" target="_blank" class="project-link">View on GitHub →</a>
         </div>
-        <a href="https://github.com/SricharanPindi" target="_blank" class="project-link">View on GitHub →</a>
       </div>
-    </div>
 
-    <div class="project-card">
-      <div class="project-card-top" style="background: linear-gradient(135deg, #fdf3e3, #f5e0b5);">📈</div>
-      <div class="project-card-body">
-        <h3 class="project-title">Collections Forecasting &amp; Risk Signal Pipeline</h3>
-        <p class="project-desc">Python-based forecasting pipeline for staffing and inventory projection across unsecured lending collections (~200K accounts). Automated early-warning signals for drift detection integrated into Tableau, reviewed weekly by risk leadership.</p>
-        <div class="project-tags">
-          <span class="project-tag tag-gold">Python</span>
-          <span class="project-tag tag-blue">SQL</span>
-          <span class="project-tag tag-blue">Snowflake</span>
-          <span class="project-tag tag-green">Tableau</span>
+      <!-- Project 2 -->
+      <div class="project-item reverse">
+        <div class="project-img-placeholder">📈</div>
+        <div class="project-body">
+          <div class="project-tags-row">
+            <span class="ptag">Python</span>
+            <span class="ptag">SQL</span>
+            <span class="ptag">Snowflake</span>
+            <span class="ptag">Tableau</span>
+          </div>
+          <h3 class="project-title">Collections Forecasting & Risk Signal Pipeline</h3>
+          <p class="project-desc">Python-based forecasting pipeline for staffing and inventory projection across ~200K unsecured lending accounts. Automated early-warning signals for drift detection and loss pockets, integrated into Tableau dashboards reviewed weekly by risk leadership.</p>
+          <a href="https://github.com/sricharan9292" target="_blank" class="project-link">View on GitHub →</a>
         </div>
-        <a href="https://github.com/SricharanPindi" target="_blank" class="project-link">View on GitHub →</a>
       </div>
-    </div>
 
-    <div class="project-card">
-      <div class="project-card-top" style="background: linear-gradient(135deg, #e8edf8, #c8d4ef);">🏦</div>
-      <div class="project-card-body">
-        <h3 class="project-title">Banking Data Pipeline Optimization</h3>
-        <p class="project-desc">PySpark pipelines to process and transform high-volume banking data across retail and corporate assets — covering customer transactions, loan performance, and financial statements. Cut pipeline run time by ~20% through query optimization.</p>
-        <div class="project-tags">
-          <span class="project-tag tag-blue">PySpark</span>
-          <span class="project-tag tag-gold">SQL</span>
-          <span class="project-tag tag-green">Dimensional Modeling</span>
+      <!-- Project 3 — Placeholder -->
+      <div class="project-item">
+        <div class="project-img-placeholder">🏦</div>
+        <div class="project-body">
+          <div class="project-tags-row">
+            <span class="ptag">PySpark</span>
+            <span class="ptag">SQL</span>
+            <span class="ptag">Dimensional Modeling</span>
+          </div>
+          <h3 class="project-title">Banking Data Pipeline Optimization</h3>
+          <p class="project-desc">Optimized PySpark data pipelines processing high-volume banking data across retail and corporate assets — customer transactions, loan performance, and financial statements. Cut pipeline run time by ~20% through query tuning and schema normalization.</p>
+          <a href="https://github.com/sricharan9292" target="_blank" class="project-link">View on GitHub →</a>
         </div>
-        <a href="https://github.com/SricharanPindi" target="_blank" class="project-link">View on GitHub →</a>
       </div>
-    </div>
 
+      <!-- Project 4 — Placeholder -->
+      <div class="project-item reverse">
+        <div class="project-img-placeholder">🤖</div>
+        <div class="project-body">
+          <div class="project-tags-row">
+            <span class="ptag">Python</span>
+            <span class="ptag">Scikit-learn</span>
+            <span class="ptag">Pandas</span>
+          </div>
+          <h3 class="project-title">Project 4 — Coming Soon</h3>
+          <p class="project-desc">This project is currently in progress. Check back soon or visit GitHub to follow updates as it develops.</p>
+          <a href="https://github.com/sricharan9292" target="_blank" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Project 5 — Placeholder -->
+      <div class="project-item">
+        <div class="project-img-placeholder">📊</div>
+        <div class="project-body">
+          <div class="project-tags-row">
+            <span class="ptag">Power BI</span>
+            <span class="ptag">SQL</span>
+            <span class="ptag">Azure Synapse</span>
+          </div>
+          <h3 class="project-title">Project 5 — Coming Soon</h3>
+          <p class="project-desc">This project is currently in progress. Check back soon or visit GitHub to follow updates as it develops.</p>
+          <a href="https://github.com/sricharan9292" target="_blank" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <hr class="section-divider">
 
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <p class="section-tag">Credentials</p>
+    <h2 class="section-title">Professional Certifications</h2>
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <div class="cert-logo">☁️</div>
+        <div class="cert-issuer">Certification 1</div>
+        <div class="cert-name">Update with your certification name</div>
+        <div class="cert-sub">Issued by — Update issuer</div>
+        <a href="#" class="cert-link">View Certificate ↗</a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-logo">📊</div>
+        <div class="cert-issuer">Certification 2</div>
+        <div class="cert-name">Update with your certification name</div>
+        <div class="cert-sub">Issued by — Update issuer</div>
+        <a href="#" class="cert-link">View Certificate ↗</a>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-logo">🏅</div>
+        <div class="cert-issuer">Certification 3</div>
+        <div class="cert-name">Update with your certification name</div>
+        <div class="cert-sub">Issued by — Update issuer</div>
+        <a href="#" class="cert-link">View Certificate ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- EXPERIENCE -->
 <section id="experience">
-  <p class="section-label">Career</p>
-  <h2 class="section-heading">Experience</h2>
-  <div class="exp-list">
+  <div class="section-inner">
+    <p class="section-tag">Career</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-list">
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <span class="exp-date">Feb 2025 – Present</span>
-        <span class="exp-company">UnitedHealth Group (Optum)</span>
-        <span class="exp-company-badge badge-uhg">Current</span>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-date">Feb 2025 – Present</div>
+          <div class="exp-company">UnitedHealth Group (Optum)</div>
+          <span class="exp-badge badge-g">Current</span>
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Data Analyst</div>
+          <ul class="exp-bullets">
+            <li>Delivered Power BI dashboards tracking AI-enabled claims ops across 5 business units with real-time adjudication and payment accuracy visibility.</li>
+            <li>Identified performance trends in Snowflake datasets driving a ~15% reduction in auto-adjudication cycle time.</li>
+            <li>Architected semantic layers used by 3 product teams, cutting ad hoc query load by ~25%.</li>
+            <li>Built scalable ETL pipelines for claims, eligibility, and provider analytics.</li>
+          </ul>
+        </div>
       </div>
-      <div class="exp-content">
-        <div class="exp-role">Data Analyst</div>
-        <ul class="exp-bullets">
-          <li>Built Power BI dashboards tracking AI-enabled claims ops across 5 business units, giving leadership real-time views of adjudication rates and payment accuracy.</li>
-          <li>Designed Snowflake semantic layers and analytical models, reducing ad hoc query load by ~25%.</li>
-          <li>Built scalable data pipelines and curated datasets used by 3 product teams for claims, eligibility, and provider reporting.</li>
-          <li>Integrated data from 4 operational systems into a consistent structure for downstream ML products.</li>
-        </ul>
+
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-date">Jan 2024 – Feb 2025</div>
+          <div class="exp-company">Wells Fargo</div>
+          <span class="exp-badge badge-w">Financial Services</span>
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Data Analyst</div>
+          <ul class="exp-bullets">
+            <li>Designed forecast models for staffing and inventory projection across ~200K unsecured lending accounts.</li>
+            <li>Engineered automated early-warning signals for drift detection integrated into weekly risk leadership routines.</li>
+            <li>Developed fraud risk strategies using SAS, SQL & Python; mentored 2 junior analysts.</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-date">Jan 2022 – Aug 2023</div>
+          <div class="exp-company">KPMG (via Miraicoders)</div>
+          <span class="exp-badge badge-k">Consulting</span>
+        </div>
+        <div class="exp-right">
+          <div class="exp-role">Junior Data Analyst</div>
+          <ul class="exp-bullets">
+            <li>Extracted credit risk insights from large banking datasets for a team of 8 consultants.</li>
+            <li>Cut PySpark pipeline run time by ~20% through query optimization.</li>
+            <li>Reduced data errors ~18% through validation and cleansing across 6 analytical datasets.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <span class="exp-date">Jan 2024 – Feb 2025</span>
-        <span class="exp-company">Wells Fargo</span>
-        <span class="exp-company-badge badge-wf">Financial Services</span>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Data Analyst</div>
-        <ul class="exp-bullets">
-          <li>Designed forecast models for staffing and capacity planning across a ~200K account collections portfolio.</li>
-          <li>Built automated early-warning signals for drift detection and loss pocket identification, reviewed weekly by risk leadership.</li>
-          <li>Developed fraud risk mitigation strategies using SAS, SQL, and Python, balancing risk controls with customer experience.</li>
-          <li>Mentored 2 junior analysts in data discovery and forecasting best practices.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-meta">
-        <span class="exp-date">Jan 2022 – Aug 2023</span>
-        <span class="exp-company">KPMG (via Miraicoders)</span>
-        <span class="exp-company-badge badge-kpmg">Consulting</span>
-      </div>
-      <div class="exp-content">
-        <div class="exp-role">Junior Data Analyst</div>
-        <ul class="exp-bullets">
-          <li>Analyzed banking datasets across customer transactions, loan performance, and financial statements for a team of 8 consultants.</li>
-          <li>Developed PySpark pipelines cutting processing time by ~20% through query optimization.</li>
-          <li>Supported fraud detection covering $2B+ in monthly transaction volume.</li>
-          <li>Reduced data errors by ~18% through validation and cleansing processes across 6 analytical datasets.</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <hr class="section-divider">
 
-<section id="about">
-  <div>
-    <p class="section-label">About me</p>
-    <h2 class="section-heading">Let's connect</h2>
-    <div class="about-text">
-      <p>I'm a Data Analyst with 4 years of experience across healthcare payer operations, financial services, and consulting. I specialize in building the data infrastructure — pipelines, semantic layers, dashboards — that lets teams make faster, more confident decisions.</p>
-      <p>Currently at UnitedHealth Group (Optum), where I work on AI-enabled claims analytics. I'm finishing my M.S. in Computer Science at Westcliff University (Dec 2025) and am open to new opportunities.</p>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <p class="section-tag">Academic background</p>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-school">Westcliff University — Irvine, CA</div>
+        <div class="edu-degree">Master of Science, Computer Science</div>
+        <div class="edu-date">Expected Dec 2025</div>
+        <div class="edu-courses">Coursework: Machine Learning · Cloud Computing & Big Data · Database Systems · Data Mining · Statistical Modeling</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div>
-    <p class="section-label" style="margin-bottom:1rem;">Contact</p>
-    <div class="about-contact">
-      <a href="mailto:sricharan9292@gmail.com" class="contact-row">
-        <span class="contact-icon">✉️</span>
-        sricharan9292@gmail.com
-      </a>
-      <a href="tel:+13098266743" class="contact-row">
-        <span class="contact-icon">📞</span>
-        (309) 826-6743
-      </a>
-      <a href="https://linkedin.com/in/sricharan-reddy-pindi" target="_blank" class="contact-row">
-        <span class="contact-icon">💼</span>
-        linkedin.com/in/sricharan-reddy-pindi
-      </a>
-      <a href="https://github.com/SricharanPindi" target="_blank" class="contact-row">
-        <span class="contact-icon">🐙</span>
-        github.com/SricharanPindi
-      </a>
-    </div>
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-tag">Get in touch</p>
+  <h2 class="section-title">Let's Connect</h2>
+  <p class="contact-sub">Open to Data Analyst, Senior Data Analyst, and Analytics Engineer roles.</p>
+  <div class="contact-btns">
+    <a href="mailto:sricharan9292@gmail.com" class="btn-white">✉️ Email Me</a>
+    <a href="https://www.linkedin.com/in/sricharan-reddy-pindi/" target="_blank" class="btn-white-outline">LinkedIn ↗</a>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 Sricharan Reddy Pindi &middot; Data Analyst Portfolio
+  © 2025 Sricharan Reddy Pindi · All rights reserved.
 </footer>
 
 </body>
